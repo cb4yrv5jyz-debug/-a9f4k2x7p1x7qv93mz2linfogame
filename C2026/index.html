@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Informatik Quest - ein kleines 2D-Lernspiel im Pixel-Art-Stil." />
+    <title>Informatik Quest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Spielfeld von Informatik Quest"></canvas>
+
+      <section class="screen screen--active" id="mainMenu" aria-label="Hauptmenue">
+        <div class="brand">
+          <span class="brand__badge">2D Lern-RPG</span>
+          <h1>Informatik Quest</h1>
+          <p>Lerne Informatik, sammle Badges und hilf den Bewohnern der digitalen Welt.</p>
+        </div>
+        <div class="menu-actions">
+          <button class="button button--primary" data-action="new-game" type="button">Neues Spiel</button>
+          <button class="button" data-action="load-game" type="button">Spiel laden</button>
+          <button class="button" data-action="settings" type="button">Einstellungen</button>
+          <button class="button" data-action="credits" type="button">Credits</button>
+        </div>
+      </section>
+
+      <section class="screen" id="infoPanel" aria-live="polite">
+        <div class="panel">
+          <button class="icon-button" data-action="close-panel" type="button" aria-label="Schliessen">x</button>
+          <h2 id="panelTitle">Info</h2>
+          <p id="panelText"></p>
+        </div>
+      </section>
+
+      <section class="hud" id="hud" aria-label="Spielstatus">
+        <div class="hud__left">
+          <span id="healthText">Leben 5</span>
+          <span id="xpText">XP 0</span>
+          <span id="levelText">Level 1</span>
+        </div>
+        <div class="hud__right">
+          <span id="coinsText">Muenzen 0</span>
+        </div>
+      </section>
+
+      <section class="quest-book" id="questBook" aria-label="Questbuch">
+        <h2>Questbuch</h2>
+        <div id="questList"></div>
+      </section>
+
+      <section class="dialogue-box" id="dialogueBox" aria-live="polite">
+        <strong id="speakerName"></strong>
+        <p id="dialogueText"></p>
+        <div class="dialogue-actions" id="dialogueActions"></div>
+      </section>
+
+      <section class="minigame-panel" id="minigamePanel" aria-label="Minispiel">
+        <div class="panel">
+          <h2 id="minigameTitle"></h2>
+          <p id="minigameQuestion"></p>
+          <div id="minigameAnswers" class="answer-grid"></div>
+        </div>
+      </section>
+
+      <section class="pause-menu" id="pauseMenu" aria-label="Pause">
+        <div class="panel">
+          <h2>Pause</h2>
+          <button class="button button--primary" data-action="resume" type="button">Weiter</button>
+          <button class="button" data-action="save" type="button">Speichern</button>
+          <button class="button" data-action="settings" type="button">Einstellungen</button>
+          <button class="button" data-action="main-menu" type="button">Hauptmenue</button>
+        </div>
+      </section>
+
+      <div class="toast" id="toast" role="status"></div>
+    </main>
+
+    <script src="js/collisions.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/npc.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/save.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/quests.js"></script>
+    <script src="js/minigames.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "id": "forest",
+  "width": 34,
+  "height": 26,
+  "start": { "x": 180, "y": 260 },
+  "npcs": [],
+  "signs": [
+    { "x": 220, "y": 220, "text": "Der Wald der Algorithmen wird spaeter erweitert." }
+  ],
+  "objects": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "school",
+  "width": 40,
+  "height": 28,
+  "start": { "x": 260, "y": 340 },
+  "npcs": [
+    {
+      "id": "prof-byte",
+      "name": "Prof. Byte",
+      "x": 520,
+      "y": 310,
+      "questId": "binary-start",
+      "dialogue": [
+        "Willkommen in der Informatik-Welt.",
+        "Kannst du mir helfen?",
+        "Beantworte diese Frage."
+      ]
+    },
+    {
+      "id": "lina",
+      "name": "Lina",
+      "x": 710,
+      "y": 500,
+      "dialogue": [
+        "Im Questbuch siehst du offene Aufgaben.",
+        "Druecke Q, um es ein- oder auszublenden."
+      ]
+    }
+  ],
+  "signs": [
+    { "x": 400, "y": 420, "text": "Informatikschule: Wissen ist der beste Schluessel." }
+  ],
+  "objects": []
+}
